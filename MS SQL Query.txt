@@ -1,11 +1,11 @@
 To find duplicate in the records
 
 SELECT
-sourceaddress,Tenant_Id,MigrationTypeName,guid,count(*)
+sourceaddress,Id,TypeName,guid,count(*)
 FROM
-    MigrationInflightData
+    InflightData
 GROUP BY
-    sourceaddress,Tenant_Id,MigrationTypeName,guid
+    sourceaddress,Id,TypeName,guid
 HAVING
     COUNT(*) > 1
 
@@ -15,4 +15,4 @@ SELECT expressions FROM tables [WHERE conditions] ORDER BY expression [ ASC | DE
 
 Delete
 
-DELETE FROM [dbo].[MigOps_Historical] WHERE WorkItemId=156384
+DELETE FROM [dbo].[HistoryClass] WHERE WorkItemId=46546544
