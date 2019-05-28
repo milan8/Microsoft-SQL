@@ -1,0 +1,18 @@
+To find duplicate in the records
+
+SELECT
+sourceaddress,Tenant_Id,MigrationTypeName,guid,count(*)
+FROM
+    MigrationInflightData
+GROUP BY
+    sourceaddress,Tenant_Id,MigrationTypeName,guid
+HAVING
+    COUNT(*) > 1
+
+To sort in descending order
+
+SELECT expressions FROM tables [WHERE conditions] ORDER BY expression [ ASC | DESC ];
+
+Delete
+
+DELETE FROM [dbo].[MigOps_Historical] WHERE WorkItemId=156384
