@@ -1,1 +1,2 @@
-# MSSQL
+# Microsoft SQL Queries
+
